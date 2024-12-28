@@ -8,11 +8,28 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous"
     >
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/sign-up/style.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/sign-up/style.css">
     <title>Sign Up</title>
 </head>
 <body>
-<h1>Sign Up</h1>
+<form id="sign-up-form" action="./sign-up.html" method="POST">
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input class="form-control" type="text" id="username" name="username">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input class="form-control" type="email" id="email" name="email">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input class="form-control" type="password" id="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+<script src="./js/sign-up/script.js"></script>
+<script src="./js/helpers/encryptStr.js"></script>
+<script src="./js/helpers/randomId.js"></script>
 </body>
 </html>
