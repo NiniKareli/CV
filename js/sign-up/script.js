@@ -1,3 +1,7 @@
+if (checkAuthStatus()) {
+    window.location.href = 'index.html';
+}
+
 // DOM Elements
 const signUpForm = document.getElementById('sign-up-form');
 
@@ -35,6 +39,7 @@ async function signUp(e) {
         users.push(newUser);
 
         localStorage.setItem('users', JSON.stringify(users));
+        sessionStorage.setItem('session', "session");
 
         window.location.href = 'index.html';
     }

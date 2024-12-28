@@ -1,3 +1,7 @@
+if (checkAuthStatus()) {
+    window.location.href = 'index.html';
+}
+
 // DOM Elements
 const signInForm = document.getElementById('sign-up-form');
 
@@ -20,7 +24,7 @@ async function signIn(e) {
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
     // Check if the user exists
-    const existingUser = users.find(user => user.email === email);4
+    const existingUser = users.find(user => user.email === email);
 
     if (!existingUser) {
         alert('Could not find any user related to the email. Try again.');
@@ -29,6 +33,7 @@ async function signIn(e) {
         const hashedPassword = await encryptStr(password);
 
         if (existingUser.password === hashedPassword) {
+            sessionStorage.setItem('session', "session");
             window.location.href = 'index.html';
         } else {
             alert('Incorrect password.');
