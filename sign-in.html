@@ -13,6 +13,30 @@
     <title>Sign In</title>
 </head>
 <body>
-<h1>Sign In</h1>
+<div class="form-part">
+    <div class="mb-5">
+        <h1 class="display-4 fw-bold">Sign In</h1>
+        <p class="opacity-75"><small>Don't have an account? <a href="./sign-up.html">Sign Up</a></small></p>
+    </div>
+    <form id="sign-up-form" action="./sign-in.html" method="POST">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email <span class="required">*</span></label>
+            <input class="form-control" type="email" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password <span class="required">*</span></label>
+            <input class="form-control" type="password" id="password" name="password" required>
+        </div>
+        <div class="w-100 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary px-4">Sign In</button>
+        </div>
+    </form>
+</div>
+<div class="image-part">
+    PHOTO
+</div>
+<!-- SCRIPTS -->
+<script src="./js/sign-in/script.js"></script>
+<script src="./js/helpers/encryptStr.js"></script>
 </body>
 </html>
